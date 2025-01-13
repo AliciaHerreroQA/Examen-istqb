@@ -11,19 +11,22 @@
 <body>
     <section id='header'>
         <h1>ISTQB Online Exam</h1>
+        <h1>"Registro Examen ISTQB"</h1>
         <p>Developed with HTML5, CSS3 and Javascript!</p>
     </section>
     
     <section id='singup'>
-        <h2>Sing Up</h2>
+        <h2>Registro</h2>
         <form id='formsingup'>
-            <input type="text" id="welcomename"  placeholder="your name">
-            <button>Register</button>
+            <input type="text" id="nombre" placeholder="Tu nombre" required minlength="3" required maxlength="30" >
+            <input type="text" id="apellidos" placeholder="Tus apellidos" required minlength="3" required maxlength="30" >
+            <button onclick = "inscripcion()">Inscribirse</button>
+            
         </form>
      </section>
     
      <section id='exam'>
-        <h2>Exam</h2>
+        <h2>Examen ISTQB</h2>
         
      </section>
       
