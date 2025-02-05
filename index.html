@@ -16,13 +16,14 @@
     </section>
     
     <section id='singup'>
-        <h2>Registro</h2>
+        <h2>Registro Examen</h2>
         <form id='formsingup'>
-            <input type="text" id="nombre" placeholder="Tu nombre" required minlength="3" required maxlength="30" >
-            <input type="text" id="apellidos" placeholder="Tus apellidos" required minlength="3" required maxlength="30" >
-            <button onclick = "inscripcion()">Inscribirse</button>
+            <input type="text" id="nombre" placeholder="Tu nombre" required minlength="3" maxlength="30" >
+            <input type="text" id="apellidos" placeholder="Tus apellidos" required minlength="3" maxlength="30" >
+            <button type="button" onclick ="bienvenida()">Registro</button>            <!--bienvenida   será el nombre de la función de JS-->
             
         </form>
+        <p id="mensaje"></p>
      </section>
     
      <section id='exam'>
