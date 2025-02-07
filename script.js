@@ -26,6 +26,41 @@ function bienvenida() {
     
 }
 
+function correccionPregunta() {
+
+    let respuestaSeleccionada = "Sin Responder";
+
+    if (document.getElementById("respuestaA").checked)   {                             //el ckecked indica si el botón está seleccionado
+        respuesta ="A"; 
+    }
+    else if (document.getElementById("respuestaB").checked) {
+        respuesta ="B";
+    }
+    else if (document.getElementById("respuestaC").checked) {
+        respuesta ="C";
+    
+
+
+    let puntuacion = 0 ;
+
+    if (respuesta === "C") {
+        puntuacion = 2;
+    } else if (respuesta === "Sin Responder") {
+        puntuación = 0;
+    } else {
+        puntuación = -1;
+    }
+    document.getElementById("resultado").textContent = "Tu puntuación es: " + puntuacion;
+    
+
+
+
+
+
+
+
+
+}
 
 
 
