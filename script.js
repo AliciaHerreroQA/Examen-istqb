@@ -26,9 +26,9 @@ function bienvenida() {
     
 }
 
-function correccionPregunta() {
+function correccionPregunta() {   //nombre que le he dado a la función del button
 
-    let respuestaSeleccionada = "Sin Responder";
+    let respuesta = "Sin Responder";
 
     if (document.getElementById("respuestaA").checked)   {                             //el ckecked indica si el botón está seleccionado
         respuesta ="A"; 
@@ -39,16 +39,16 @@ function correccionPregunta() {
     else if (document.getElementById("respuestaC").checked) {
         respuesta ="C";
     
-
+    }
 
     let puntuacion = 0 ;
 
     if (respuesta === "C") {
         puntuacion = 2;
     } else if (respuesta === "Sin Responder") {
-        puntuación = 0;
+        puntuacion = 0;
     } else {
-        puntuación = -1;
+        puntuacion = -1;
     }
     document.getElementById("resultado").textContent = "Tu puntuación es: " + puntuacion;
     
