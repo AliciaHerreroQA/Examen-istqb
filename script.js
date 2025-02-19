@@ -52,16 +52,27 @@ function correccionPregunta(numeroPregunta) {       //nombre que le he dado a la
         puntuacion = -1;
     }
     document.getElementById("resultado"+ numeroPregunta).textContent = "Tu puntuación es: " + puntuacion
+        return puntuacion
 
     }
 
 
 function evaluarTodas() {
+    let puntuacionFinal = 0;
+
     for(let i=1; i<=10; i++){                                          //BUCLES
-        correccionPregunta(i)
+        puntuacionFinal += correccionPregunta(i)
     }                        
+    if(puntuacionFinal<0) {
+        puntuacionFinal = 0
+    }
+    if(puntuacionFinal<12) {
+        document.getElementById("resultado").style.color="red"
+    }else {
+        document.getElementById("resultado").style.color="green"
+    }
 
-
+    document.getElementById("resultado").textContent = "Tu puntuación es: " + puntuacionFinal
 }
 
 
