@@ -26,38 +26,40 @@ function bienvenida() {
     
 }
 
-function correccionPregunta() {   //nombre que le he dado a la función del button
+function correccionPregunta(numeroPregunta) {       //nombre que le he dado a la función del button
 
     let respuesta = "Sin Responder";
 
-    if (document.getElementById("respuestaA").checked)   {                             //el ckecked indica si el botón está seleccionado
+    if (document.getElementById("respuestaA" + numeroPregunta).checked)   {                             //el ckecked indica si el botón está seleccionado
         respuesta ="A"; 
     }
-    else if (document.getElementById("respuestaB").checked) {
+    else if (document.getElementById("respuestaB" + numeroPregunta).checked) {
         respuesta ="B";
     }
-    else if (document.getElementById("respuestaC").checked) {
+    else if (document.getElementById("respuestaC" + numeroPregunta).checked) {
         respuesta ="C";
     
     }
 
     let puntuacion = 0 ;
+    let respuestasCorrectas = ["C", "B", "B", "A", "C", "A", "C", "B", "B", "A" ]         //ARRAY
 
-    if (respuesta === "C") {
+    if (respuesta === respuestasCorrectas[numeroPregunta-1]) {
         puntuacion = 2;
     } else if (respuesta === "Sin Responder") {
         puntuacion = 0;
     } else {
         puntuacion = -1;
     }
-    document.getElementById("resultado").textContent = "Tu puntuación es: " + puntuacion;
-    
+    document.getElementById("resultado"+ numeroPregunta).textContent = "Tu puntuación es: " + puntuacion
+
+    }
 
 
-
-
-
-
+function evaluarTodas() {
+    for(let i=1; i<=10; i++){                                          //BUCLES
+        correccionPregunta(i)
+    }                        
 
 
 }
