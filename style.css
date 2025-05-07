@@ -25,6 +25,7 @@ body {
 
 /* Estilo para las secciones */
 section {
+    display: none;
     margin: 2% auto; /* Margen superior e inferior en porcentaje */
     padding: 5%; /* Padding en porcentaje */
     border-radius: 8px;

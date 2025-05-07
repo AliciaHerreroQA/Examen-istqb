@@ -17,99 +17,100 @@
     
     <section id='singup'>
         <h2>Registro Examen</h2>
-        <form id='formsingup'>
-            <input type="text" id="nombre" placeholder="Tu nombre" required minlength="3" maxlength="30" >
-            <input type="text" id="apellidos" placeholder="Tus apellidos" required minlength="3" maxlength="30" >
-            <button type="button" onclick ="bienvenida()">Registro</button>            <!--bienvenida   será el nombre de la función de JS-->
+        <form data-testid="form-formsingup" id='formsingup'>
+            <input data-testid="input_nombre" type="text" id="nombre" placeholder="Tu nombre" required minlength="3" maxlength="30" >
+            <input data-testid="input_apellidos" type="text" id="apellidos" placeholder="Tus apellidos" required minlength="3" maxlength="30" >
+            <button data-testid="boton_registro" type="button" onclick ="bienvenida()">Registro</button>   <!--bienvenida   será el nombre de la función de JS-->
             
         </form>
-        <p id="mensaje"></p>
+        <p data-testid="mensaje" id="mensaje" ></p>
+        <p data-testid="mensaje-bienvenida" id="mensajeBienvenida" ></p>  
      </section>
     
-     <section id='exam'>
+     <section data-testid="exam">
         <h2>Examen ISTQB</h2>
             <p><b>1. ¿A qué actividad da soporte una herramienta de preparación de datos de prueba?</b></p>
-        <form id="examenFormulario">
-            <input type ="radio" id="respuestaA1" name="respuesta1" value ="A">A) Monitorización y control de prueba.
-            <input type ="radio" id="respuestaB1" name="respuesta1" value ="B">B) Análisis y diseño de la prueba.
-            <input type ="radio" id="respuestaC1" name="respuesta1" value="C">C) Implementación y ejecución de la prueba.
-            <input type ="radio" id="sinResponder1" name="respuesta1" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado1"></p>
+        <form data-testid="examenFormulario">
+            <input data-testid="respuesta_1a" type ="radio" id="respuestaA1" name="respuesta1" value ="A">A) Monitorización y control de prueba.
+            <input data-testid="respuesta_1b" type ="radio" id="respuestaB1" name="respuesta1" value ="B">B) Análisis y diseño de la prueba.
+            <input data-testid="respuesta_1c" type ="radio" id="respuestaC1" name="respuesta1" value="C">C) Implementación y ejecución de la prueba.
+            <input data-testid="respuesta_1d" type ="radio" id="sinResponder1" name="respuesta1" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado1" data-testid="resultado1"></p>
 
             <p><b>2. Which item correctly identifies a potential risk with test automation?</b></p>
-            <input type ="radio" id="respuestaA2" name="respuesta2" value ="A">A) Test tools may not be reliable enough.
-            <input type ="radio" id="respuestaB2" name="respuesta2" value ="B">B) Unrealistic expectations regarding functionality of a tool.
-            <input type ="radio" id="respuestaC2" name="respuesta2" value="C">C) There may be unknown side effects in operational use.
-            <input type ="radio" id="sinResponder2" name="respuesta2" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado2"></p>
+            <input data-testid="respuesta_2a" type ="radio" id="respuestaA2" name="respuesta2" value ="A">A) Test tools may not be reliable enough.
+            <input data-testid="respuesta_2b" type ="radio" id="respuestaB2" name="respuesta2" value ="B">B) Unrealistic expectations regarding functionality of a tool.
+            <input data-testid="respuesta_2c" type ="radio" id="respuestaC2" name="respuesta2" value="C">C) There may be unknown side effects in operational use.
+            <input data-testid="respuesta_2d" type ="radio" id="sinResponder2" name="respuesta2" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado2" data-testid="resultado2"></p>
 
             <p><b>3. Which of the following is NOT an example of the shift left approach?</b></p>
-            <input type ="radio" id="respuestaA3" name="respuesta3" value ="A">A) Create component test cases before programming the associated code.
-            <input type ="radio" id="respuestaB3" name="respuesta3" value ="B">B) Execution of non-functional tests, starting during system level testing.
-            <input type ="radio" id="respuestaC3" name="respuesta3" value="C">C) Executing a performance efficiency test for a component during component
+            <input data-testid="respuesta_3a" type ="radio" id="respuestaA3" name="respuesta3" value ="A">A) Create component test cases before programming the associated code.
+            <input data-testid="respuesta_3b" type ="radio" id="respuestaB3" name="respuesta3" value ="B">B) Execution of non-functional tests, starting during system level testing.
+            <input data-testid="respuesta_3c" type ="radio" id="respuestaC3" name="respuesta3" value="C">C) Executing a performance efficiency test for a component during component
             testing.
-            <input type ="radio" id="sinResponder3" name="respuesta3" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado3"></p>
+            <input data-testid="respuesta_3d"type ="radio" id="sinResponder3" name="respuesta3" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado3" data-testid="resultado3"></p>
 
             <p><b>4. Your organization’s test strategy suggests that once a system is planned
                 for retirement, data migration to a new system shall be tested. As part of what test activity is this testing MOST likely to be performed? </b></p>
-            <input type ="radio" id="respuestaA4" name="respuesta4" value ="A">A) Maintenance testing.
-            <input type ="radio" id="respuestaB4" name="respuesta4" value ="B">B) Regression testing.
-            <input type ="radio" id="respuestaC4" name="respuesta4" value="C">C) Component testing.
-            <input type ="radio" id="sinResponder4" name="respuesta4" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado4"></p>
+            <input data-testid="respuesta_4a" type ="radio" id="respuestaA4" name="respuesta4" value ="A">A) Maintenance testing.
+            <input data-testid="respuesta_4b" type ="radio" id="respuestaB4" name="respuesta4" value ="B">B) Regression testing.
+            <input data-testid="respuesta_4c" type ="radio" id="respuestaC4" name="respuesta4" value="C">C) Component testing.
+            <input data-testid="respuesta_4d" type ="radio" id="sinResponder4" name="respuesta4" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado4" data-testid="resultado4"></p>
 
             <p><b>5. Which of the following is a benefit of early and frequent feedback by stakeholders?  </b></p>
-            <input type ="radio" id="respuestaA5" name="respuesta5" value ="A">A) It improves the test process for future projects.
-            <input type ="radio" id="respuestaB5" name="respuesta5" value ="B">B) It is the only way to measure the quality of changes.
-            <input type ="radio" id="respuestaC5" name="respuesta5" value="C">C) It helps avoid requirements misunderstandings.
-            <input type ="radio" id="sinResponder5" name="respuesta5" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado5"></p>
+            <input data-testid="respuesta_5a" type ="radio" id="respuestaA5" name="respuesta5" value ="A">A) It improves the test process for future projects.
+            <input data-testid="respuesta_5b" type ="radio" id="respuestaB5" name="respuesta5" value ="B">B) It is the only way to measure the quality of changes.
+            <input data-testid="respuesta_5c" type ="radio" id="respuestaC5" name="respuesta5" value="C">C) It helps avoid requirements misunderstandings.
+            <input data-testid="respuesta_5d" type ="radio" id="sinResponder5" name="respuesta5" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado5" data-testid="resultado5"></p>
 
             <p><b>6. Which of these statements is NOT a factor that contributes to successful reviews?</b></p>
-            <input type ="radio" id="respuestaA6" name="respuesta6" value ="A">A) Management´s personal involvement in communicating findings.
-            <input type ="radio" id="respuestaB6" name="respuesta6" value ="B">B) Establishing clear objectives and measurable exit criteria for the review.
-            <input type ="radio" id="respuestaC6" name="respuesta6" value="C">C) Participants should dedicate adequate time for the review.
-            <input type ="radio" id="sinResponder6" name="respuesta6" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado6"></p>
+            <input data-testid="respuesta_6a" type ="radio" id="respuestaA6" name="respuesta6" value ="A">A) Management´s personal involvement in communicating findings.
+            <input data-testid="respuesta_6b" type ="radio" id="respuestaB6" name="respuesta6" value ="B">B) Establishing clear objectives and measurable exit criteria for the review.
+            <input data-testid="respuesta_6c" type ="radio" id="respuestaC6" name="respuesta6" value="C">C) Participants should dedicate adequate time for the review.
+            <input data-testid="respuesta_6d" type ="radio" id="sinResponder6" name="respuesta6" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado6" data-testid="resultado6"></p>
 
             <p><b>7. Which of the following statements is NOT true for white-box testing? </b></p>
-            <input type ="radio" id="respuestaA7" name="respuesta7" value ="A">A) White-box testing is testing based on the analysis of 
+            <input data-testid="respuesta_7a" type ="radio" id="respuestaA7" name="respuesta7" value ="A">A) White-box testing is testing based on the analysis of 
             the internal structure of a component or system.
-            <input type ="radio" id="respuestaB7" name="respuesta7" value ="B">B) White-box coverage metrics can help identify 
+            <input data-testid="respuesta_7b" type ="radio" id="respuestaB7" name="respuesta7" value ="B">B) White-box coverage metrics can help identify 
             additional tests to increase code coverage.
-            <input type ="radio" id="respuestaC7" name="respuesta7" value="C">C) White-box testing can help identify unimplemented requirements.
-            <input type ="radio" id="sinResponder7" name="respuesta7" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado7"></p>
+            <input data-testid="respuesta_7c" type ="radio" id="respuestaC7" name="respuesta7" value="C">C) White-box testing can help identify unimplemented requirements.
+            <input data-testid="respuesta_7d" type ="radio" id="sinResponder7" name="respuesta7" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado7" data-testid="resultado7"></p>
 
             <p><b>8. Which of the following activities describes the BEST way to formulate acceptance criteria for a given user story?</b></p>
-            <input type ="radio" id="respuestaA8" name="respuesta8" value ="A">A) Performing retrospectives to determine the actual needs 
+            <input data-testid="respuesta_8a" type ="radio" id="respuestaA8" name="respuesta8" value ="A">A) Performing retrospectives to determine the actual needs 
             of the stakeholders.
-            <input type ="radio" id="respuestaB8" name="respuesta8" value ="B">B) Using the given/when/then format to describe an example test condition
-            <input type ="radio" id="respuestaC8" name="respuesta8" value="C">C) Documenting risks related to a given user story in a test plan 
+            <input data-testid="respuesta_8b" type ="radio" id="respuestaB8" name="respuesta8" value ="B">B) Using the given/when/then format to describe an example test condition
+            <input data-testid="respuesta_8c" type ="radio" id="respuestaC8" name="respuesta8" value="C">C) Documenting risks related to a given user story in a test plan 
             to facilitate the risk-based testing
-            <input type ="radio" id="sinResponder8" name="respuesta8" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado8"></p>
+            <input data-testid="respuesta_8d"type ="radio" id="sinResponder8" name="respuesta8" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado8" data-testid="resultado8"></p>
 
             <p><b>9. How do testers add value to iteration and release planning?</b></p>
-            <input type ="radio" id="respuestaA9" name="respuesta9" value ="A">A) Testers determine the priority of the user stories to be developed.
-            <input type ="radio" id="respuestaB9" name="respuesta9" value ="B">B) Testers participate in risk analysis and determine testability of user stories.
-            <input type ="radio" id="respuestaC9" name="respuesta9" value="C">C) Testers focus only on refining the functional aspects of the system under test.
-            <input type ="radio" id="sinResponder9" name="respuesta9" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado9"></p>
+            <input data-testid="respuesta_9a" type ="radio" id="respuestaA9" name="respuesta9" value ="A">A) Testers determine the priority of the user stories to be developed.
+            <input data-testid="respuesta_9b" type ="radio" id="respuestaB9" name="respuesta9" value ="B">B) Testers participate in risk analysis and determine testability of user stories.
+            <input data-testid="respuesta_9c" type ="radio" id="respuestaC9" name="respuesta9" value="C">C) Testers focus only on refining the functional aspects of the system under test.
+            <input data-testid="respuesta_9d" type ="radio" id="sinResponder9" name="respuesta9" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado9" data-testid="resultado9"></p>
 
             <p><b>10. Which ONE of the following options is an exit criterion for testing a system?</b></p>
-            <input type ="radio" id="respuestaA10" name="respuesta10" value ="A">A) Expected defect density is reached and defects are reported.
-            <input type ="radio" id="respuestaB10" name="respuesta10" value ="B">B) Test environment readiness.
-            <input type ="radio" id="respuestaC10" name="respuesta10" value="C">C) Requirements are translated into given/when/then format.
-            <input type ="radio" id="sinResponder10" name="respuesta10" value="Sin Responder" checked>Sin Responder   <br><br>
-            <p id="resultado10"></p>
-            <button type="button" onclick="evaluarTodas()">Finalizar Examen</button>
-
+            <input data-testid="respuesta_10a" type ="radio" id="respuestaA10" name="respuesta10" value ="A">A) Expected defect density is reached and defects are reported.
+            <input data-testid="respuesta_10b" type ="radio" id="respuestaB10" name="respuesta10" value ="B">B) Test environment readiness.
+            <input data-testid="respuesta_10c" type ="radio" id="respuestaC10" name="respuesta10" value="C">C) Requirements are translated into given/when/then format.
+            <input data-testid="respuesta_10d" type ="radio" id="sinResponder10" name="respuesta10" value="Sin Responder" checked>Sin Responder   <br><br>
+            <p id="resultado10" data-testid="resultado10"></p>
+            <button data-testid="boton_finalizar" type="button" onclick="evaluarTodas()">Finalizar Examen</button>
+            
 
             
         </form>
-        <p id="resultado"></p>
+        <p id="resultado" data-testid="resultado"></p>
         
      </section>
       
